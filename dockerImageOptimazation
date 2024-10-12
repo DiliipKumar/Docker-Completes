@@ -1,23 +1,22 @@
-🚀 𝗢𝗽𝘁𝗶𝗺𝗶𝘇𝗶𝗻𝗴 𝗗𝗼𝗰𝗸𝗲𝗿 𝗜𝗺𝗮𝗴𝗲 𝗦𝗶𝘇𝗲: 𝗙𝗿𝗼𝗺 𝟭.𝟱𝗚𝗕 𝘁𝗼 𝟱𝟬𝗠𝗕! 🚀
+
+# 🚀 Optimizing Docker Image Size: From 1.5GB to 50MB! 🚀
 
 Reducing Docker image size is crucial for faster deployments and efficient resource usage. Here are 4 proven techniques to achieve a lean Docker image:
 
-1️⃣ 𝗦𝗲𝗽𝗮𝗿𝗮𝘁𝗲 𝗗𝗲𝗽𝗲𝗻𝗱𝗲𝗻𝗰𝗶𝗲𝘀 𝗳𝗼𝗿 𝗗𝗲𝘃 & 𝗣𝗿𝗼𝗱:
-Install only production dependencies in the final image.
-Use commands like npm install --only=production or pip install --no-dev to differentiate between dev and prod dependencies.
+1️⃣ **Separate Dependencies for Dev & Prod**:  
+Install only production dependencies in the final image.  
+Use commands like `npm install --only=production` or `pip install --no-dev` to differentiate between dev and prod dependencies.
 
-2️⃣ 𝗔𝗹𝗽𝗶𝗻𝗲 𝗕𝗮𝘀𝗲 𝗜𝗺𝗮𝗴𝗲:
-Alpine is a minimal base image that drastically reduces the image size.
+2️⃣ **Alpine Base Image**:  
+Alpine is a minimal base image that drastically reduces the image size.  
 Ensure compatibility with Alpine, as it has a smaller package ecosystem and may need additional installations.
 
-3️⃣ 𝗠𝘂𝗹𝘁𝗶-𝘀𝘁𝗮𝗴𝗲 𝗕𝘂𝗶𝗹𝗱𝘀:
+3️⃣ **Multi-stage Builds**:  
 Multi-stage builds allow you to build your app in one stage and copy only the necessary artifacts to the final image, ensuring it contains only production-ready code.
 
-4️⃣ 𝗡𝗴𝗶𝗻𝘅 𝗮𝘀 𝗮 𝗪𝗲𝗯 𝗦𝗲𝗿𝘃𝗲𝗿:
+4️⃣ **Nginx as a Web Server**:  
 Use a lightweight Nginx base image to efficiently serve static files for web apps. It’s minimal and optimized for performance.
 
 💡 By applying these techniques, you can reduce Docker images from GBs to MBs, optimizing performance and speeding up deployments!
 
-𝗗𝗲𝘁𝗮𝗶𝗹𝗲𝗱 𝗩𝗶𝗱𝗲𝗼: https://lnkd.in/gV9U33E9
-
-write above in redme file
+**Detailed Video**: [https://lnkd.in/gV9U33E9](https://lnkd.in/gV9U33E9)
