@@ -1,8 +1,3 @@
-Here’s your content saved in Markdown format (`Dockerfile_Notes.md`):
-
----
-
-````markdown
 ## 7. Dockerfile – Writing Custom Images
 
 ### Important Dockerfile Keywords
@@ -36,25 +31,28 @@ RUN pip install -r requirements.txt
 COPY . .
 EXPOSE 5000
 CMD ["python", "app.py"]
-````
+```
 
 ---
 
 ### Writing Optimized Dockerfiles
 
-* ✅ Use **slim/alpine** images (smaller, faster)
-* ✅ Chain RUN commands to reduce layers
-* ✅ Use `.dockerignore` to avoid copying junk
-* ✅ Multi-stage builds for production
+- ✅ Use **slim/alpine** images (smaller, faster)
+- ✅ Chain RUN commands to reduce layers
+- ✅ Use `.dockerignore` to avoid copying junk
+- ✅ Multi-stage builds for production
 
 ---
 
 ### ADD vs COPY & CMD vs ENTRYPOINT
 
-* `COPY` = simple copy (preferred)
-* `ADD` = copy + remote URLs + tar extract
-* `CMD` = default command (overridable)
-* `ENTRYPOINT` = fixed command (not easily overridden)
+- `COPY` = simple copy (preferred)
+
+- `ADD` = copy + remote URLs + tar extract
+
+- `CMD` = default command (overridable)
+
+- `ENTRYPOINT` = fixed command (not easily overridden)
 
 Example:
 
@@ -87,8 +85,8 @@ CMD ["./main"]
 
 ## 8. Docker Volumes (Persistent Storage)
 
-* By default, container data = **temporary**.
-* Volumes make data **persistent**.
+- By default, container data = **temporary**.
+- Volumes make data **persistent**.
 
 📌 Example:
 
@@ -103,9 +101,9 @@ docker volume ls
 
 Default networks:
 
-* `bridge` (default)
-* `host` (share host network)
-* `none` (isolated)
+- `bridge` (default)
+- `host` (share host network)
+- `none` (isolated)
 
 📌 Example:
 
@@ -116,6 +114,3 @@ docker run -d --name app --network=mynet myapp
 ```
 
 Now app → db communication works via `db`.
-
-```
-
